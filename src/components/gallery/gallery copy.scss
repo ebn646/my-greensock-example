@@ -1,0 +1,140 @@
+
+.gallery{
+    .inspired{
+        
+    }
+}
+
+
+#gallery{
+    position:absolute;
+    height:100%;
+    width:50%;
+    z-index: 17;
+    top:0;
+    left:15px;
+    //opacity:0;
+
+    .main{
+        height:100%;
+    }
+
+
+.cbp-bislideshow {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
+	overflow:hidden;
+}
+
+.cbp-bislideshow li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	 visibility:hidden;
+   	background-size: cover;
+    background-repeat:no-repeat;
+
+    &:first-child{
+        visibility:visible;
+    }
+}
+
+.close{
+		position:absolute;
+		top:20px;
+		left:0;
+		cursor:pointer;
+    z-index:100;
+    opacity:0;
+	}
+
+/* If background-size supported we'll add the images to the background of the li */
+
+.backgroundsize .cbp-bislideshow li {
+	background-size: cover;
+	background-position: center center;
+}
+
+.cbp-bislideshow li img {
+	display: none;
+}
+
+span.cbp-biplay:before {
+	content: "\e002";
+}
+
+span.cbp-bipause:before {
+	content: "\e003";
+}
+
+span.cbp-binext:before {
+	content: "\e000";
+}
+
+span.cbp-biprev:before {
+	content: "\e001";
+}
+
+.cbp-bicontrols span.cbp-binext {
+	float: right;
+}
+
+/* Fallback */
+
+.no-js.no-backgroundsize .cbp-bislideshow li:first-child {
+	opacity: 1;
+}
+
+.no-js.backgroundsize .cbp-bislideshow li:first-child img {
+	display: block;
+}
+
+.treatment-options{
+	background:#f6f6f6;
+	position:relative;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+	.container{
+		max-width:100%;
+		
+	}
+}
+
+}
+
+
+.dotnav{
+   z-index:1000;
+    position: absolute;
+    top: 45%;
+    left:185%;
+    list-style-type: none;
+  li{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:gray;
+    cursor:pointer;
+    margin-bottom:15px;
+    text-decoration:none;
+     opacity:.3;
+    &.active{
+      opacity:.5;
+      background:yellow;
+    }
+    &:last-child{
+      display:none;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.gallery-holder{
+    background: white;
+    position:relative;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+
+    h1{
+        font-size:60px;
+    }
+
+    .header{
+        width:50%;
+        height:45px;
+        background:#4c5257;
+        color:white;
+        position:absolute;
+        bottom:0;
+        right:0;
+        cursor:pointer;
+        display:flex;
+        justify-content: center;
+    }
+
+    .gallery-item{
+        height:100vh;
+        width:100%;
+        align-items: center;
+        justify-content: center;
+        display:flex;
+        flex-direction:row;
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0;
+
+        .pics{
+            background: purple;
+             height:100vh;
+
+        }
+        .text{
+             height:100vh;
+             display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            background:white;
+        }
+
+        &.inspired{
+            opacity:1;
+            .pics{
+                background: url('/images/section2bg.jpg');
+                background-size:cover;
+            }
+           
+        }
+        &.informed{
+            .pics{
+                background: url('/images/section3bg.jpg');
+                background-size:cover;
+            }
+           
+        }
+        &.positive{
+            .pics{
+                background: url('/images/section5bg.jpg');
+                background-size:cover;
+            }
+           
+        }
+        &.introduced{
+           .pics{
+                background: url('/images/section6bg.jpg');
+                background-size:cover;
+            }
+        }
+
+    }
+   
+}
